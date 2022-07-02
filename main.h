@@ -10,14 +10,15 @@
 typedef struct func
 {
 	char *ptr;
-	int (*f)(va_list);
+	int (*f)(va_list args);
 } func_t;
 /*end of struct*/
 
+int (*find_func(char *ptr))(va_list args);
 int _printf(const char *format, ...);
 int _putchar(char c);
-int printc(char c);
-int prints(char *);
+int printc(va_list args);
+int prints(va_list args);
 /*end of prototypes*/
 
 #endif /*MAIN_H*/
