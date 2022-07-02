@@ -5,7 +5,7 @@
  *
  * Return: count
  */
-int printc(va_list c)
+int printc(char c)
 {
 	_putchar(c);
 	return (1);
@@ -17,24 +17,15 @@ int printc(va_list c)
  *
  * Return: count
  */
-int prints(va_list *s)
+int prints(char *str)
 {
-	int x = 0;
+	int i = 0;
 
-	while (s[x])
-		x++;
-	_puts(s);
-	return(x);
-}
+	while (str[i])
+	{
+		_putchar(str[i]);
+		i++;
 
-/**
- * print_per - prints a percent sign.
- * @c: input character.
- *
- * Return: count
- */
-int print_per(va_list c)
-{
-	_putchar('%');
-	return(1);
+	}
+	return(i);
 }

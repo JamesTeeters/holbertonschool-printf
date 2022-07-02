@@ -22,7 +22,6 @@ int _printf(const char *format, ...)
 	i++;
 	if (format[i] == '%')
 		_putchar('%');
-	find_function(&format[i]);
 	return (0);
 }
 
