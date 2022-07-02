@@ -18,10 +18,11 @@ int _printf(const char *format, ...)
 	{
 		for (i = i; format[i] != '%' && format[i]; i++)
 			_putchar(format[i]);
+		i++;
+		if (format[i] == '%')
+			_putchar('%');
+		/*find_func(&format[i]);*/
 	}
-	i++;
-	if (format[i] == '%')
-		_putchar('%');
 	return (0);
 }
 
