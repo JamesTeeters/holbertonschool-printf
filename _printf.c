@@ -8,5 +8,21 @@
  */
 int _printf(const char *format, ...)
 {
+	unsigned int i;
 
+	va_list args;
+	va_start(args, format);
+
+	i = 0;
+	while (format[i])
+	{
+		for (i = i; format[i] != '%' && format[i]; i++)
+			_putchar(format[i]);
+	}	
+	i++;
+	if (format[i] == '%')
+		_putchar('%');
+	find_function(&format[i]);
+	return (0);
 }
+
