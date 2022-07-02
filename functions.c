@@ -13,7 +13,7 @@ int printc(char c)
 
 /**
  * prints - print a string.
- * @s: input string.
+ * @str: input string.
  *
  * Return: count
  */
@@ -27,5 +27,5 @@ int prints(char *str)
 		i++;
 
 	}
-	return(i);
+	return (i);
 }

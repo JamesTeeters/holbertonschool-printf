@@ -7,8 +7,11 @@
 /*end of includes*/
 
 /*structure for format types*/
-
-
+typedef struct func
+{
+	char *ptr;
+	int (*f)(va_list);
+} func_t;
 /*end of struct*/
 
 int _printf(const char *format, ...);
