@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * printc - print a character
- * @c: input character
+ * @args: input arguments.
  *
  * Return: count
  */
@@ -16,7 +16,7 @@ int printc(va_list args)
 
 /**
  * prints - print a string.
- * @str: input string.
+ * @args: input arguments.
  *
  * Return: count
  */
