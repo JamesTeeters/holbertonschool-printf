@@ -25,9 +25,9 @@ int prints(va_list args)
 	int i = 0;
 	char *c;
 
-	while (args)
+	c = va_arg(args, char*);
+	while (c[i])
 	{
-		c = va_arg(args, char*);
 		_putchar(c[i]);
 		i++;
 
