@@ -11,7 +11,7 @@ int (*find_func(char c))(va_list args)
 
 	func_t func[] = {
 		{'c', printc},
-		{'s', prints}'
+		{'s', prints},
 		{NULL, NULL}
 	};
 
