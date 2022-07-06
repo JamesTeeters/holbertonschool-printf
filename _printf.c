@@ -10,7 +10,8 @@ int _printf(const char *format, ...)
 {
 	unsigned int i;
 	va_list args;
-
+	int (*fun)(va_list args);
+	
 	va_start(args, format);
 
 	i = 0;
@@ -18,11 +19,20 @@ int _printf(const char *format, ...)
 	{
 		for (i = i; format[i] != '%' && format[i]; i++)
 			_putchar(format[i]);
-		i++;
-		if (format[i] == '%')
+		if (format[i + 1] == '%')
+		{
 			_putchar('%');
-		/*find_func(&format[i]);*/
+			i++;
+		}
+		if (format[i + 1] == 'c'|| format[i + 1] == 's')
+		{
+			fun = find_func(format[i + 1]);
+			fun(args);
+			i++;
+		}
+		i++;
 	}
+	va_end (args);
 	return (0);
 }
 
