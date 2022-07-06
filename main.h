@@ -9,12 +9,12 @@
 /*structure for format types*/
 typedef struct func
 {
-	char *ptr;
+	char specifier;
 	int (*f)(va_list args);
 } func_t;
 /*end of struct*/
 
-int (*find_func(char *ptr))(va_list args);
+int (*find_func(char c))(va_list args);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int printc(va_list args);
