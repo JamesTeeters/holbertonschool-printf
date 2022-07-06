@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	unsigned int i;
 	va_list args;
 	int (*fun)(va_list args);
-	
+
 	va_start(args, format);
 
 	i = 0;
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			i++;
 		}
-		if (format[i + 1] == 'c'|| format[i + 1] == 's')
+		if (format[i + 1] == 'c' || format[i + 1] == 's')
 		{
 			fun = find_func(format[i + 1]);
 			fun(args);
@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	va_end (args);
+	va_end(args);
 	return (0);
 }
 
