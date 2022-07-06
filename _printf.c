@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			fun(args);
 			i++;
 		}
-		if (format[i])
+		if (format[i] != '\0')
 			i++;
 	}
 	va_end(args);

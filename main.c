@@ -8,6 +8,7 @@
  */
 int main(void)
 {
-	_printf("string\n");
+	
+	_printf("%s%cn%%g\n", "str", '!');
 	return (0);
 }
