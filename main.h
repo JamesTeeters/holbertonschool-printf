@@ -6,7 +6,11 @@
 #include <stddef.h>
 /*end of includes*/
 
-/*structure for format types*/
+/**
+ * struct func - format specifier
+ * @specifier: character iditifier
+ * @f: format function
+ */
 typedef struct func
 {
 	char specifier;
