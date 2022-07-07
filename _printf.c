@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int (*fun)(va_list args);
 
-	if (format == NULL || (format == '%' && format[1] == '\0'))
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(args, format);
 
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			i++;
 			count++;
 		}
-		if (format[i + 1] == 'c' || format[i + 1] == 's')
+		if (format[i + 1] == 'c' || format[i + 1] == 's' || format[i + 1] == 'd' || format[i +1] == 'i')
 		{
 			fun = find_func(format[i + 1]);
 			count += fun(args);
