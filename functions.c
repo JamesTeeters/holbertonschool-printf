@@ -47,6 +47,7 @@ int printn(va_list args)
 
 	n = va_arg(args, int);
 	print_rec(n);
+	return (n);
 }
 
 /**
