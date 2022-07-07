@@ -24,7 +24,7 @@ int _putchar(char c);
 int printc(va_list args);
 int prints(va_list args);
 int printn(va_list args);
-int print_rec(int n);
+void print_rec(int n);
 /*end of prototypes*/
 
 #endif /*MAIN_H*/
