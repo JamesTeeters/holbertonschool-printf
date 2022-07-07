@@ -30,7 +30,13 @@ int _printf(const char *format, ...)
 			i++;
 			count++;
 		}
-		if (format[i + 1] == 'c' || format[i + 1] == 's' || format[i + 1] == 'd' || format[i +1] == 'i')
+		if (format[i + 1] == 'c' || format[i + 1] == 's')
+		{
+			fun = find_func(format[i + 1]);
+			count += fun(args);
+			i++;
+		}
+		if (format[i + 1] == 'd' || format[i + 1] == 'i')
 		{
 			fun = find_func(format[i + 1]);
 			count += fun(args);
