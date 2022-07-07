@@ -43,11 +43,24 @@ int prints(va_list args)
  */
 int printn(va_list args)
 {
-	int n;
+	int n = va_arg(args, int);
+	int tmp = n;
+	int count = 1;
 
-	n = va_arg(args, int);
-	print_rec(n);
-	return (print_rec(n));
+	if (n < 0)
+	{
+		n = -n;
+		tmp = n;
+		_putchar('-');
+		count++;
+	}
+	while (n / 10)
+	{
+		n = n / 10;
+		count++;
+	}
+	print_rec(tmp);
+	return (count);
 }
 
 /**
@@ -56,12 +69,9 @@ int printn(va_list args)
  *
  * Return: count
  */
-int print_rec(int n)
+void print_rec(int n)
 {
-	int count = 0;
-
-	if (n / 10 != 0)
-		count = print_rec(n / 10);
+	if (n / 10)
+		print_rec(n /10);
 	_putchar(n % 10 + '0');
-	return (count += 1);
 }
