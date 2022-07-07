@@ -55,12 +55,12 @@ int printn(va_list args)
  *
  * Return: count
  */
-int print_rec(int n);
+int print_rec(int n)
 {
 	int count = 0;
 
 	if (n / 10 != 0)
 		count = print_rec(n / 10);
-	putchar(n % 10);
+	_putchar(n % 10 + '0');
 	return (count += 1);
 }
