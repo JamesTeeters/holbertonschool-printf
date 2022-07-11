@@ -11,12 +11,14 @@ Print a literal with a character in the middle followed by a new line.
 
     _printf("Str%cng\n",'!');
 Output:
+
 Str!ng
 
 Print a string followed by a new line.
 
     _printf("%s\n", "I am a String!");
 Output:
+
 I am a String!
 
 Print an Integer followed by a new line.
@@ -25,6 +27,6 @@ Print an Integer followed by a new line.
     _printf("%i\n", 37);
 
 Output:
-42
 
+42
 37
