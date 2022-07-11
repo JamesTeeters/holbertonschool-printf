@@ -26,4 +26,5 @@ Print an Integer followed by a new line.
 
 Output:
 42
+
 37
